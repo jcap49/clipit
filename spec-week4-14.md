@@ -1,7 +1,6 @@
 ClipIt Spec - 4/14-4/20
 
-V1: user can create a clip - upload a photo, enter text into a form, put a link to a youtube video (or some other embedded song content - will explore api usage here).
-
+Version 1: user can create a clip - upload a photo, enter text into a form, put a link to a youtube video (or some other embedded song content - will explore api usage here).
 
 Models:
 -create a clip model
@@ -25,3 +24,5 @@ Controllers:
     -photo upload
     -music sync
     -body (text) of clip submission
+
+
