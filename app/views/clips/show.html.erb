@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= @clip.title %>
+<p>This is the unique address you can use to share the clip wth your friends: <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %></p>
+<strong><%= @clip.title %></strong>
 <%= image_tag @clip.photo %>
 <%= @clip.body %>
 
