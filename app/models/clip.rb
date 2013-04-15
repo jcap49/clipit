@@ -1,3 +1,3 @@
 class Clip < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :title
 end
