@@ -1,6 +1,5 @@
 class ClipsController < ApplicationController
-  # GET /clips
-  # GET /clips.json
+
   def index
     @clips = Clip.all
 
@@ -10,10 +9,10 @@ class ClipsController < ApplicationController
     end
   end
 
-  # GET /clips/1
-  # GET /clips/1.json
   def show
     @clip = Clip.find(params[:id])
+    @clip_title = @clip.title
+    @clip_description = @clip.body
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,8 +20,6 @@ class ClipsController < ApplicationController
     end
   end
 
-  # GET /clips/new
-  # GET /clips/new.json
   def new
     @clip = Clip.new
 
@@ -32,13 +29,10 @@ class ClipsController < ApplicationController
     end
   end
 
-  # GET /clips/1/edit
   def edit
     @clip = Clip.find(params[:id])
   end
 
-  # POST /clips
-  # POST /clips.json
   def create
     @clip = Clip.new(params[:clip])
 
@@ -53,8 +47,6 @@ class ClipsController < ApplicationController
     end
   end
 
-  # PUT /clips/1
-  # PUT /clips/1.json
   def update
     @clip = Clip.find(params[:id])
 
@@ -69,8 +61,6 @@ class ClipsController < ApplicationController
     end
   end
 
-  # DELETE /clips/1
-  # DELETE /clips/1.json
   def destroy
     @clip = Clip.find(params[:id])
     @clip.destroy

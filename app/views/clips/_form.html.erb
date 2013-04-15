@@ -11,7 +11,24 @@
     </div>
   <% end %>
 
+  <div id="clip-title">
+    <%= f.label :title, "Clip title: " %>
+    <%= f.text_field :title %>
+  </div>
+
+  <%= f.label :photo %>
+
+  <div id="clip-description">
+    <%= f.label :body, "Clip description: " %>
+    <%= f.text_field :body, :cols => "30", :rows => "10" %>
+  </div>
+
+  <div id="photo">
+    <%= f.label :photo, "Add photo: " %>
+    <%= f.file_field :photo %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button" %>
   </div>
 <% end %>
