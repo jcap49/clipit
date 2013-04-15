@@ -16,16 +16,14 @@
     <%= f.text_field :title %>
   </div>
 
-  <%= f.label :photo %>
+  <div id="photo" >
+    <%= f.label :photo, "Upload your photo here: " %>
+    <%= f.file_field :photo %>
+  </div>
 
   <div id="clip-description">
     <%= f.label :body, "Clip description: " %>
     <%= f.text_field :body, :cols => "30", :rows => "10" %>
-  </div>
-
-  <div id="photo">
-    <%= f.label :photo, "Add photo: " %>
-    <%= f.file_field :photo %>
   </div>
 
   <div class="actions">
