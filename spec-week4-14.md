@@ -6,6 +6,9 @@ To-do:
 -implement music syncing feature (see youtube api hack)
   -clip controller
       -music sync
+        -use iframe api to load player (& hide controls - see docs for more info)
+        -use youtube data api to search for youtube videos
+        (youtube video id on the backend - which then gets passed to iframe api to load/play video)
 -figure out how to constrain photo size
 -adjust appropriate views to accomodate music syncing portion
 -explore building user auth/o-auth (to surprise kyle - yayaya)
