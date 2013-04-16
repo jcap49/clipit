@@ -23,10 +23,14 @@ To-do:
   -about:
     -needs copy
     -needs formatting
-
+  -create:
+    -"Create photo" button needs to be hidden
 
 
 Done (as of 4/16):
+
+Basic Functionality: 90% complete
+
 Views:
 -implement mock ups (use some previous work as well)
   -home

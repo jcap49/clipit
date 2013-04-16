@@ -11,7 +11,7 @@ class Clip < ActiveRecord::Base
   validates :body, presence: true, length: {maximum: 1000}
   validates :photo, presence: true
   validates :slug, presence: true
-  validates :unique_url, presence: true
+  validates :unique_url, presence: true, length: {maximum: 100}
 
   # if unique_url form field is blank
 
