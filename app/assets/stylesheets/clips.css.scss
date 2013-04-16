@@ -1,4 +1,17 @@
 // clip/new
+#clip_unique_url {
+  float: right;
+  width: 300px;
+  margin-right: 230px;
+}
+
+#url {
+  margin-top: 10px;
+}
+
+#photo {
+  margin-top: 20px;
+}
 #clip-description {
   margin-top: 50px;
 }
@@ -24,6 +37,3 @@
   font-size: 20px;
 }
 
-// Place all the styles related to the Clips controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/

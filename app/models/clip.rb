@@ -1,9 +1,9 @@
 class Clip < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, :use => :slugged
+  friendly_id :unique_url , :use => :slugged
 
   # Attrs
-  attr_accessible :title, :body, :photo, :slug
+  attr_accessible :title, :body, :photo, :slug, :unique_url
   has_attached_file :photo
 
   # Validations
@@ -11,5 +11,9 @@ class Clip < ActiveRecord::Base
   validates :body, presence: true, length: {maximum: 1000}
   validates :photo, presence: true
   validates :slug, presence: true
+  validates :unique_url, presence: true
+
+  # if unique_url form field is blank
+
 
 end

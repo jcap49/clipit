@@ -16,6 +16,12 @@
     <%= f.text_field :title %>
   </div>
 
+  <div id="unique-url">
+    <%= f.label :unique_url, "Create your unique url:" %>
+    <span id="url">http://localhost:3000/clips/</span>
+    <%= f.text_field :unique_url %>
+  </div>
+
   <div id="photo" >
     <%= f.label :photo, "Upload your photo here: " %>
     <%= f.file_field :photo %>
@@ -23,7 +29,7 @@
 
   <div id="clip-description">
     <%= f.label :body, "Clip description: " %>
-    <%= f.text_field :body, :cols => "30", :rows => "10" %>
+    <%= f.text_field :body %>
   </div>
 
   <div class="actions">
