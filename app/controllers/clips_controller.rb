@@ -1,12 +1,6 @@
 class ClipsController < ApplicationController
 
   def index
-    @clips = Clip.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @clips }
-    end
   end
 
   def show

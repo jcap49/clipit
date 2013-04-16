@@ -5,10 +5,7 @@
  <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
 </p>
 
-<strong><%= @clip.title %></strong>
+<span id="clip-title-perm"><strong><%= @clip.title %></strong></span>
 <%= image_tag @clip.photo %>
 <%= @clip.body %>
 
-
-<%= link_to 'Edit', edit_clip_path(@clip) %> |
-<%= link_to 'Back', clips_path %>
