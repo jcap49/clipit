@@ -13,6 +13,6 @@ class Clip < ActiveRecord::Base
   validates :slug, presence: true
   validates :unique_url, presence: true, length: {maximum: 100}
 
-
+  # TO-DO: add a song attr & migration
 
 end

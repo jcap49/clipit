@@ -9,7 +9,7 @@ class ClipsController < ApplicationController
     @clip_description = @clip.body
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @clip }
     end
   end
@@ -18,7 +18,7 @@ class ClipsController < ApplicationController
     @clip = Clip.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.json { render json: @clip }
     end
   end
@@ -32,7 +32,7 @@ class ClipsController < ApplicationController
 
     # TO-DO: create a variable linked to create form to pass query
     # into
-    #@video = @client.videos_by(:query => "")
+    @videos = yt_client.videos_by(:query => "dog")
 
     respond_to do |format|
       if @clip.save

@@ -2,4 +2,9 @@
 
 <%= render 'form' %>
 
+<!-- test that the youtube api is working -->
+<%= @videos.each do |videos| %>
+  <%= videos.title %>
+<% end %>
+
 <%= link_to 'Back', root_url %>
