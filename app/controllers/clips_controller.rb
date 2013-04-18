@@ -30,6 +30,10 @@ class ClipsController < ApplicationController
   def create
     @clip = Clip.new(params[:clip])
 
+    # TO-DO: create a variable linked to create form to pass query
+    # into
+    #@video = @client.videos_by(:query => "")
+
     respond_to do |format|
       if @clip.save
         format.html { redirect_to @clip, notice: 'Clip was successfully created.' }

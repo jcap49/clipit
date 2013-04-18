@@ -5,6 +5,7 @@ gem 'pg'
 gem 'paperclip'
 gem 'friendly_id', "~> 4.0.9"
 gem 'youtube_it'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
