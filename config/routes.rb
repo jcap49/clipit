@@ -1,4 +1,6 @@
 ClipIt::Application.routes.draw do
+  devise_for :users
+
   resources :clips, only: [:new, :create, :show, :edit]
 
   match '/about',     to: 'static_pages#about'
