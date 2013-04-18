@@ -9,9 +9,9 @@ To-do:
         -use iframe api to load player (& hide controls - see docs for more info)
         -use youtube data api to search for youtube videos
         (youtube video id on the backend - which then gets passed to iframe api to load/play video)
--figure out how to constrain photo size
+-implemenet user authentication via devise
 -adjust appropriate views to accomodate music syncing portion
--explore building user auth/o-auth (to surprise kyle - yayaya)
+-figure out how to constrain photo size
 -finish implementing clip/example
 -fix stupid CSS bullshit:
   -error messages
@@ -25,7 +25,6 @@ To-do:
     -needs formatting
   -create:
     -"Create photo" button needs to be hidden
-
 
 Done (as of 4/16):
 
