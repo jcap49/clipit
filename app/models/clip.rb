@@ -13,7 +13,6 @@ class Clip < ActiveRecord::Base
   validates :slug, presence: true
   validates :unique_url, presence: true, length: {maximum: 100}
 
-  # if unique_url form field is blank
 
 
 end

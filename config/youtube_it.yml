@@ -1,0 +1,11 @@
+common: &common
+  dev_key: AI39si4ha6qICXurMV41Wt1W853x5Xf4MaFI5ZYCW2pF5oX8Dg4sqiLB8_Tb7w_FhK5XyngLRgqdNTfHXmVqhqKmCUSkTgcDNg
+  username: johncapecelatro
+  password:
+
+test:
+  <<: *common
+development:
+  <<: *common
+production:
+  <<: *common

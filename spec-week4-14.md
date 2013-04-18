@@ -31,6 +31,9 @@ Done (as of 4/16):
 
 Basic Functionality: 90% complete
 
+Miscellaneous:
+-registered for YouTube application API (via google code)
+
 Views:
 -implement mock ups (use some previous work as well)
   -home
