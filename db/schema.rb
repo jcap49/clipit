@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418144048) do
+ActiveRecord::Schema.define(:version => 20130418180440) do
 
   create_table "clips", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130418144048) do
     t.datetime "photo_updated_at"
     t.string   "slug"
     t.string   "unique_url"
+    t.string   "song"
   end
 
   create_table "users", :force => true do |t|

@@ -1,3 +1,39 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+<script>
+  $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#clip_song" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+
 <%= form_for(@clip) do |f| %>
   <% if @clip.errors.any? %>
     <div id="error_explanation">
@@ -27,6 +63,10 @@
     <%= f.file_field :photo %>
   </div>
 
+  <div id="song-select">
+    <%= f.label :song, "Choose song:" %>
+    <%= f.text_field :song %>
+  </div>
   <!-- TO-Do: add a :song form field & link to YouTube_It -->
 
   <div id="clip-description">

@@ -5,8 +5,7 @@ class ClipsController < ApplicationController
 
   def show
     @clip = Clip.find(params[:id])
-    @clip_title = @clip.title
-    @clip_description = @clip.body
+    @videos = yt_client.videos_by(:query => "dog", :per_page => "2")
 
     respond_to do |format|
       format.html
@@ -32,7 +31,7 @@ class ClipsController < ApplicationController
 
     # TO-DO: create a variable linked to create form to pass query
     # into
-    @videos = yt_client.videos_by(:query => "dog")
+
 
     respond_to do |format|
       if @clip.save

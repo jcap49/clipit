@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   private
 
   def yt_client
-    @yt_client ||= YouTubeIt::Client.new(:dev_key => dev_key)
+    @yt_client ||= YouTubeIt::Client.new(:dev_key => "AI39si4ha6qICXurMV41Wt1W853x5Xf4MaFI5ZYCW2pF5oX8Dg4sqiLB8_Tb7w_FhK5XyngLRgqdNTfHXmVqhqKmCUSkTgcDNg")
   end
 end

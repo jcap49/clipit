@@ -2,8 +2,9 @@ class Clip < ActiveRecord::Base
   extend FriendlyId
   friendly_id :unique_url , :use => :slugged
 
+  belongs_to :user
   # Attrs
-  attr_accessible :title, :body, :photo, :slug, :unique_url
+  attr_accessible :title, :body, :photo, :slug, :unique_url, :song
   has_attached_file :photo
 
   # Validations
@@ -12,6 +13,7 @@ class Clip < ActiveRecord::Base
   validates :photo, presence: true
   validates :slug, presence: true
   validates :unique_url, presence: true, length: {maximum: 100}
+  validates :song, presence: true
 
   # TO-DO: add a song attr & migration
 
