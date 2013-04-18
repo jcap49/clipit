@@ -10,7 +10,9 @@ class Clip < ActiveRecord::Base
   # Validations
   validates :title, presence: true, length: {maximum: 250}
   validates :body, presence: true, length: {maximum: 1000}
-  validates :photo, presence: true
+
+  #TO-DO: add presence validator back to photo before pushing live
+
   validates :slug, presence: true
   validates :unique_url, presence: true, length: {maximum: 100}
   validates :song, presence: true

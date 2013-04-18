@@ -4,6 +4,7 @@ Version 1: user can create a clip - upload a photo, enter text into a form, put 
 
 To-do:
 -implement music syncing feature (see youtube api hack)
+  -finish implementing jquery dropdown with api
   -clip controller
       -music sync
         -use iframe api to load player (& hide controls - see docs for more info)

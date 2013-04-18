@@ -4,35 +4,11 @@
 
 <script>
   $(function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
     $( "#clip_song" ).autocomplete({
-      source: availableTags
+      source: new_clip_path
     });
   });
-  </script>
+</script>
 
 <%= form_for(@clip) do |f| %>
   <% if @clip.errors.any? %>
