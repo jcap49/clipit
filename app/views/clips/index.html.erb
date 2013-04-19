@@ -8,6 +8,7 @@
   </tr>
 
 <% @clips.each do |clip| %>
+  <%= clip.title %>
 
   <tr>
     <td><%= link_to 'Show', clip %></td>
@@ -20,3 +21,5 @@
 <br />
 
 <%= link_to 'New Clip', new_clip_path %>
+
+

@@ -1,4 +1,16 @@
 <div class="row">
    <h1 id="logo"><%= link_to "Clip.It", root_url %></h1>
    <h3>Clip.It - the easiest way to share the soundtrack of your memories</h3>
+   <p>
+    <%= link_to "Sign-up", new_user_registration_path %> || <%= link_to "Sign-in", new_user_session_path %> ||
+    <%= link_to "Log-out", destroy_user_session_path, :method => :delete %>
+   </p>
+
+  <div id="greeting">
+    <% if user_signed_in? %>
+     <p>Hey there, <%= current_user.email %>!</p>
+    <% end %>
+  </div>
+
+
 </div>

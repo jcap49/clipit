@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :clips
+
   # Attrs
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :user_name, :email, :password, :password_confirmation, :remember_me
 
 end

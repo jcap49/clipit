@@ -3,8 +3,9 @@ class Clip < ActiveRecord::Base
   friendly_id :unique_url , :use => :slugged
 
   belongs_to :user
+
   # Attrs
-  attr_accessible :title, :body, :photo, :slug, :unique_url, :song
+  attr_accessible :title, :body, :photo, :slug, :unique_url, :song, :user_id
   has_attached_file :photo
 
   # Validations

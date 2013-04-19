@@ -1,6 +1,7 @@
 class ClipsController < ApplicationController
 
   def index
+    @clips = current_user.clips
   end
 
   def show
@@ -26,7 +27,8 @@ class ClipsController < ApplicationController
   end
 
   def create
-    @clip = Clip.new(params[:clip])
+    @clip = current_user.clips.build(params[:clip])
+
 
     # TO-DO: fix this stupid fucking youtube api bullshit
     @videos = yt_client.videos_by(:query => :song, :per_page => "2")
