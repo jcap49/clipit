@@ -1,7 +1,10 @@
 class ClipsController < ApplicationController
+  before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
   def index
-    @clips = current_user.clips
+    if user_signed_in?
+      @clips = current_user.clips
+    end
   end
 
   def show
@@ -27,7 +30,7 @@ class ClipsController < ApplicationController
   end
 
   def create
-    @clip = current_user.clips.build(params[:clip])
+    @clip = Clip.new(params[:clip]) || current_user.clips.build(params[:clip])
 
 
     # TO-DO: fix this stupid fucking youtube api bullshit
@@ -66,5 +69,9 @@ class ClipsController < ApplicationController
       format.html { redirect_to clips_url }
       format.json { head :no_content }
     end
+  end
+
+  def example
+    @clip = Clip.find(params[:id])
   end
 end

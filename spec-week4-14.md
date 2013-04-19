@@ -1,8 +1,13 @@
 ClipIt Spec - 4/14-4/20
 
-Version 1: user can create a clip - upload a photo, enter text into a form, put a link to a youtube video (or some other embedded song content - will explore api usage here).
-
 To-do:
+-finish implementing user auth
+  -fix "your clips page" (css tweaks)
+  -check to make sure login/logout scenarios ok
+  -test login/logout/recover password
+  -think about building an admin page
+  -need a 404 error for /clips when not signed in
+
 -implement music syncing feature (see youtube api hack)
   -finish implementing jquery dropdown with api
   -clip controller
@@ -10,7 +15,6 @@ To-do:
         -use iframe api to load player (& hide controls - see docs for more info)
         -use youtube data api to search for youtube videos
         (youtube video id on the backend - which then gets passed to iframe api to load/play video)
--implemenet user authentication via devise
 -adjust appropriate views to accomodate music syncing portion
 -figure out how to constrain photo size
 -finish implementing clip/example
@@ -33,6 +37,7 @@ Basic Functionality: 90% complete
 
 Miscellaneous:
 -registered for YouTube application API (via google code)
+-implemenet user authentication via devise
 
 Views:
 -implement mock ups (use some previous work as well)

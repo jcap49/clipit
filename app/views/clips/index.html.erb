@@ -1,25 +1,14 @@
-<h1>Listing clips</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2>Your Clips</h2>
 
 <% @clips.each do |clip| %>
-  <%= clip.title %>
-
-  <tr>
-    <td><%= link_to 'Show', clip %></td>
-    <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
-    <td><%= link_to 'Destroy', clip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <p>
+    <strong><%= link_to "#{clip.title}", clip %></strong>
+    <%= link_to 'Edit', edit_clip_path(clip) %>
+    <%= link_to 'Delete', clip, method: :delete, data: { confirm: 'Are you sure you want to delete your epic clip?' } %>
+    <%= clip.created_at %>
+  </p>
 <% end %>
-</table>
-
-<br />
-
+<br>
 <%= link_to 'New Clip', new_clip_path %>
 
 
