@@ -1,14 +1,13 @@
 class ClipsController < ApplicationController
-  before_filter :authenticate_user!, only: [:edit, :index, :destroy]
+  #before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
   def index
-    if user_signed_in?
-      @clips = current_user.clips
-    end
+   @clips = current_user.clips
   end
 
   def show
     @clip = Clip.find(params[:id])
+
 
     respond_to do |format|
       format.html
@@ -31,10 +30,7 @@ class ClipsController < ApplicationController
 
   def create
     @clip = Clip.new(params[:clip]) || current_user.clips.build(params[:clip])
-
-
-    # TO-DO: fix this stupid fucking youtube api bullshit
-    @videos = yt_client.videos_by(:query => :song, :per_page => "2")
+    video_results
 
     respond_to do |format|
       if @clip.save
@@ -72,6 +68,17 @@ class ClipsController < ApplicationController
   end
 
   def example
-    @clip = Clip.find(params[:id])
+    @clip = Clip.all
+  end
+
+  def video_results
+    @videos = yt_client.videos_by(:query => params[:term], :max_results => "5")
+    display_video_results
+  end
+
+  def display_video_results
+    @results = [@videos.videos.title]
+    @results.collect {|video| puts video}
+   render :json => @results
   end
 end

@@ -1,0 +1,6 @@
+<!-- refactor so you only get one RANDOM clip -->
+<% @clip.each do |clip| %>
+  <strong><%= clip.title %></strong></span>
+  <%= image_tag clip.photo %>\
+  <%= clip.body %>
+<% end %>

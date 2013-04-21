@@ -15,6 +15,7 @@ To-do:
         -use iframe api to load player (& hide controls - see docs for more info)
         -use youtube data api to search for youtube videos
         (youtube video id on the backend - which then gets passed to iframe api to load/play video)
+
 -adjust appropriate views to accomodate music syncing portion
 -figure out how to constrain photo size
 -finish implementing clip/example
@@ -23,21 +24,19 @@ To-do:
   -error chrome is ugly as hell
   -better formatting for clips/show
   -home:
-    -needs copy
     -needs formatting
   -about:
-    -needs copy
     -needs formatting
   -create:
     -"Create photo" button needs to be hidden
 
-Done (as of 4/16):
-
-Basic Functionality: 90% complete
+Done (as of 4/21):
 
 Miscellaneous:
 -registered for YouTube application API (via google code)
 -implemenet user authentication via devise
+-wrote home copy
+-wrote about copy
 
 Views:
 -implement mock ups (use some previous work as well)

@@ -5,7 +5,7 @@
 <script>
   $(function() {
     $( "#clip_song" ).autocomplete({
-      source: new_clip_path
+      source: '<%= video_results_clips_path %>'
     });
   });
 </script>
@@ -43,7 +43,6 @@
     <%= f.label :song, "Choose song:" %>
     <%= f.text_field :song %>
   </div>
-  <!-- TO-Do: add a :song form field & link to YouTube_It -->
 
   <div id="clip-description">
     <%= f.label :body, "Clip description: " %>
