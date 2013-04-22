@@ -5,7 +5,7 @@ class Clip < ActiveRecord::Base
   belongs_to :user
 
   # Attrs
-  attr_accessible :title, :body, :photo, :slug, :unique_url, :song, :user_id
+  attr_accessible :user_id, :title, :body, :photo, :slug, :unique_url, :song, :song_id
   has_attached_file :photo
 
   # Validations

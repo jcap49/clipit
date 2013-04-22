@@ -1,13 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="row" id="clip-show">
+  <p id="notice"><%= notice %></p>
 
-<p>
- This is the unique address you can use to share the clip wth your friends:
- <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
-</p>
+  <p>
+   This is the unique address you can use to share the clip wth your friends:
+   <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
+  </p>
 
-<span id="clip-title-perm"><strong><%= @clip.title %></strong></span>
-<%= image_tag @clip.photo %>
-<%= @clip.song %>
-<%= @clip.body %>
-
-
+  <span id="clip-title-perm"><strong><%= @clip.title %></strong></span>
+  <%= image_tag @clip.photo %>
+  <%= @clip.song %>
+  <% @e_video %>
+  <%= raw @e_video %>
+  <%= @clip.body %>
+</div>

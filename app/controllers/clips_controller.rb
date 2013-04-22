@@ -7,7 +7,9 @@ class ClipsController < ApplicationController
 
   def show
     @clip = Clip.find(params[:id])
-
+    @video = yt_client.videos_by(:query => @clip.song, :max_results => "1", :format => "5")
+    @html_for_video = @video.videos
+    @e_video = @html_for_video.collect! {|video| video.embed_html5}
 
     respond_to do |format|
       format.html
@@ -71,13 +73,16 @@ class ClipsController < ApplicationController
   end
 
   def video_results
-    @videos = yt_client.videos_by(:query => params[:term], :max_results => "10", :format => "5")
+    @videos = yt_client.videos_by(:query => params[:term], :max_results => "1", :format => "5")
     display_video_results
   end
 
+  #TO-DO add save feature for song
+  #implement appropriate embed view for clips/show
   def display_video_results
    @results = @videos.videos
    @results.collect! {|video| video.title}
+
    render :json => @results
   end
 end

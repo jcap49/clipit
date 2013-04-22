@@ -19,6 +19,7 @@ To-do:
 -adjust appropriate views to accomodate music syncing portion
 -figure out how to constrain photo size
 -finish implementing clip/example
+  -how to extract "random" clips from database
 -fix stupid CSS bullshit:
   -error messages
   -error chrome is ugly as hell
@@ -29,6 +30,7 @@ To-do:
     -needs formatting
   -create:
     -"Create photo" button needs to be hidden
+-create a flash error for false password login attempt
 
 Done (as of 4/21):
 
