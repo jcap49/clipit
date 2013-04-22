@@ -32,12 +32,18 @@
 }
 
 #clip_photo input {
+  margin-top: -9999999px;
   margin-left: 9999999px;
 }
 
-// clip/id
+// clip/some_slug
 
 #clip-title-perm {
   font-size: 20px;
 }
+
+#song-player {
+  margin-left: -999999px;
+}
+
 
