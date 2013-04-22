@@ -71,7 +71,7 @@ class ClipsController < ApplicationController
   end
 
   def video_results
-    @videos = yt_client.videos_by(:query => params[:term], :max_results => "10")
+    @videos = yt_client.videos_by(:query => params[:term], :max_results => "10", :format => "5")
     display_video_results
   end
 
