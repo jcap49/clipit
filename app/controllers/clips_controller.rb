@@ -30,7 +30,6 @@ class ClipsController < ApplicationController
 
   def create
     @clip = Clip.new(params[:clip]) || current_user.clips.build(params[:clip])
-    video_results
 
     respond_to do |format|
       if @clip.save
@@ -72,13 +71,13 @@ class ClipsController < ApplicationController
   end
 
   def video_results
-    @videos = yt_client.videos_by(:query => params[:term], :max_results => "5")
+    @videos = yt_client.videos_by(:query => params[:term], :max_results => "10")
     display_video_results
   end
 
   def display_video_results
-    @results = [@videos.videos.title]
-    @results.collect {|video| puts video}
+   @results = @videos.videos
+   @results.collect! {|video| video.title}
    render :json => @results
   end
 end
