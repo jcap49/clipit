@@ -36,17 +36,25 @@ class ClipsController < ApplicationController
   end
 
   def create
-    @clip = Clip.new(params[:clip]) || current_user.clips.build(params[:clip])
-
-    respond_to do |format|
-      if @clip.save
-        format.html { redirect_to @clip, notice: 'Clip was successfully created.' }
-        format.json { render json: @clip, status: :created, location: @clip }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @clip.errors, status: :unprocessable_entity }
-      end
+    if user_signed_in?
+      @user_clip = current_user.clips.build(params[:clip])
+      @user_clip.save
+      redirect_to @user_clip, notice: 'Clip was successfully created.'
+    else
+      @clip = Clip.new(params[:clip])
+      @clip.save
+      redirect_to @clip
     end
+
+    # respond_to do |format|
+    #   if @clip.save || @user_clip.save
+    #     format.html { redirect_to @clip, notice: 'Clip was successfully created.' }
+    #     format.json { render json: @clip, status: :created, location: @clip }
+    #   else
+    #     format.html { render action: "new" }
+    #     format.json { render json: @clip.errors, status: :unprocessable_entity }
+    #   end
+    #end
   end
 
   def update
@@ -64,11 +72,11 @@ class ClipsController < ApplicationController
   end
 
   def destroy
-    @clip = Clip.find(params[:id])
+    @clip = Clip.find(params[:title])
     @clip.destroy
 
     respond_to do |format|
-      format.html { redirect_to clips_url }
+      format.html { redirect_to clip_url }
       format.json { head :no_content }
     end
   end
@@ -87,7 +95,6 @@ class ClipsController < ApplicationController
   def display_video_results
    @results = @videos.videos
    @results.collect! {|video| video.title}
-
    render :json => @results
   end
 end
