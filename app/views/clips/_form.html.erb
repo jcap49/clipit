@@ -30,7 +30,7 @@
 
   <div id="unique-url">
     <%= f.label :unique_url, "Create your unique url:" %>
-    <span id="url"><%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %></span>
+    <span id="url"><%= "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %></span>
     <%= f.text_field :unique_url %>
   </div>
 
