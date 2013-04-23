@@ -7,15 +7,7 @@ To-do:
   -test login/logout/recover password
   -think about building an admin page
   -need a 404 error for /clips when not signed in
-
--implement music syncing feature (see youtube api hack)
-  -finish implementing jquery dropdown with api
-  -clip controller
-      -music sync
-        -use iframe api to load player (& hide controls - see docs for more info)
-        -use youtube data api to search for youtube videos
-        (youtube video id on the backend - which then gets passed to iframe api to load/play video)
-
+-fix delete clip bug
 -adjust appropriate views to accomodate music syncing portion
 -figure out how to constrain photo size
 -finish implementing clip/example
@@ -58,4 +50,12 @@ Controllers:
   -handles creation of clip
     -photo upload
     -body (text) of clip submission
+
+-implement music syncing feature (see youtube api hack)
+  -finish implementing jquery dropdown with api
+  -clip controller
+      -music sync
+        -use iframe api to load player (& hide controls - see docs for more info)
+        -use youtube data api to search for youtube videos
+        (youtube video id on the backend - which then gets passed to iframe api to load/play video)
 

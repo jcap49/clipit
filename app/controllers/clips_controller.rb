@@ -72,7 +72,7 @@ class ClipsController < ApplicationController
   end
 
   def destroy
-    @clip = Clip.find(params[:title])
+    @clip = Clip.find(params[:id])
     @clip.destroy
 
     respond_to do |format|
