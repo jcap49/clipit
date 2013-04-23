@@ -7,11 +7,10 @@ To-do:
   -test login/logout/recover password
   -think about building an admin page
   -need a 404 error for /clips when not signed in
+-refactor clips/show & /examples into a partial
 -fix delete clip bug
 -adjust appropriate views to accomodate music syncing portion
 -figure out how to constrain photo size
--finish implementing clip/example
-  -how to extract "random" clips from database
 -fix stupid CSS bullshit:
   -error messages
   -error chrome is ugly as hell
@@ -37,7 +36,8 @@ Views:
   -home
   -create
   -edit/view
-
+-finish implementing clip/example
+  -how to extract "random" clips from database
 Models:
 -create a clip model
   -has title, body, (other attributes)
