@@ -1,4 +1,3 @@
-require 'HTMLEntities'
 class ClipsController < ApplicationController
   #before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
@@ -12,9 +11,6 @@ class ClipsController < ApplicationController
 
     @html_for_video = @video.videos
     @e_video = @html_for_video.collect! {|video| video.embed_html5(:url_params => {:autoplay => "1"})}
-
-    #@coder = HTMLEntities.new
-    #@formatted_video = @coder.decode("'" + @e_video.to_s + "'")
 
     respond_to do |format|
       format.html
