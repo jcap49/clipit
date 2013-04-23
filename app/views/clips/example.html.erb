@@ -1,1 +1,7 @@
-<%= @clip.title %>
+<div class="row" id="clip-show">
+  <span id="clip-title-perm"><strong><%= @clip.title %></strong></span>
+  <%= image_tag @clip.photo %>
+  <%= @clip.song %>
+  <span id="song-player"><%= raw @e_video.first %></span>
+  <%= @clip.body %>
+</div>
