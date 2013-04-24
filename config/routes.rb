@@ -1,7 +1,7 @@
 ClipIt::Application.routes.draw do
   devise_for :users
 
-  resources :clips, only: [:new, :create, :show, :edit, :index, :destroy] do
+  resources :clips, only: [:new, :create, :show, :edit, :index, :destroy, :update] do
     collection do
       get :video_results
     end

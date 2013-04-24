@@ -1,5 +1,5 @@
 class ClipsController < ApplicationController
-  #before_filter :authenticate_user!, only: [:edit, :index, :destroy]
+  before_filter :authenticate_user!, only: [:edit, :index, :destroy]
 
   def index
    @clips = current_user.clips
@@ -32,7 +32,7 @@ class ClipsController < ApplicationController
   end
 
   def create
-    if user_signed_in?
+     if user_signed_in?
       @user_clip = current_user.clips.build(params[:clip])
       @user_clip.save
       redirect_to @user_clip, notice: 'Clip was successfully created.'
@@ -72,7 +72,7 @@ class ClipsController < ApplicationController
     @clip.destroy
 
     respond_to do |format|
-      format.html { redirect_to clip_url }
+      format.html { redirect_to clips_url }
       format.json { head :no_content }
     end
   end
