@@ -5,7 +5,7 @@
    <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
   </p>
   <strong><%= @clip.title %></strong>
-  <%= image_tag @clip.photo %>
+  <%= image_tag @clip.photo.url(:small) %>
   <%= @clip.body %>
   <span id="song-player"><%= raw @e_video.first %></span>
 

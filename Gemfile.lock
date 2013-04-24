@@ -148,11 +148,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cocaine (= 0.5.1)
   coffee-rails (~> 3.2.1)
   devise
   friendly_id (~> 4.0.9)
   jquery-rails
-  paperclip
+  paperclip (= 3.4.1)
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
