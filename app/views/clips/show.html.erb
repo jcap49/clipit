@@ -1,11 +1,13 @@
-  <p id="notice"><%= notice %></p>
-
   <p>
    This is the unique address you can use to share the clip wth your friends:
    <%= link_to "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>
   </p>
-  <strong><%= @clip.title %></strong>
-  <%= image_tag @clip.photo.url(:small) %>
-  <%= @clip.body %>
-  <span id="song-player"><%= raw @e_video.first %></span>
+
+  <div id="clip-show">
+    <span id="clip-show-title"><strong><%= @clip.title %></strong></span>
+    <span id="clip-show-photo"><%= image_tag @clip.photo.url(:large) %></span>
+    <span id="clip-show-body"><%= @clip.body %></span>
+    <span id="clip-show-video"><%= raw @e_video.first %></span>
+  </div>
+
 

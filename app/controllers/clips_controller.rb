@@ -39,18 +39,8 @@ class ClipsController < ApplicationController
     else
       @clip = Clip.new(params[:clip])
       @clip.save
-      redirect_to @clip
+      redirect_to @clip, notice: 'Clip was successfully created.'
     end
-
-    # respond_to do |format|
-    #   if @clip.save || @user_clip.save
-    #     format.html { redirect_to @clip, notice: 'Clip was successfully created.' }
-    #     format.json { render json: @clip, status: :created, location: @clip }
-    #   else
-    #     format.html { render action: "new" }
-    #     format.json { render json: @clip.errors, status: :unprocessable_entity }
-    #   end
-    #end
   end
 
   def update

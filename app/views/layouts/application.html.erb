@@ -7,18 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' %>
 
-<div class="row">
- <div class="large-1 columns" id="home-nav">
-  <%= render 'layouts/menu' %>
- </div>
- <div class="large-11 columns">
-  <%= yield %>
- </div>
-</div>
+  <%= render 'layouts/header' %>
 
-<%= render 'layouts/footer' %>
+
+  <div class="row">
+   <div class="large-1 columns" id="home-nav">
+    <%= render 'layouts/menu' %>
+   </div>
+   <div class="large-11 columns">
+    <%= yield %>
+   </div>
+  </div>
+
+
+  <%= render 'layouts/footer' %>
+
 
 </body>
 </html>
