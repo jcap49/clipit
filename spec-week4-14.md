@@ -1,17 +1,8 @@
 ClipIt Spec - 4/14-4/20
 
 To-do:
--finish implementing user auth
-  -fix "your clips page" (css tweaks)
-  -check to make sure login/logout scenarios ok
-  -test login/logout/recover password
-  -think about building an admin page
-  -need a 404 error for /clips when not signed in
+
 -refactor clips/show & /examples into a partial
--fix delete clip bug
--adjust appropriate views to accomodate music syncing portion
--figure out how to constrain photo size
--fix stupid CSS bullshit:
   -error messages
   -error chrome is ugly as hell
   -better formatting for clips/show
@@ -30,6 +21,8 @@ Miscellaneous:
 -implemenet user authentication via devise
 -wrote home copy
 -wrote about copy
+-fix delete clip bug
+-figure out how to constrain photo size
 
 Views:
 -implement mock ups (use some previous work as well)
@@ -38,6 +31,7 @@ Views:
   -edit/view
 -finish implementing clip/example
   -how to extract "random" clips from database
+-adjust appropriate views to accomodate music syncing portion
 Models:
 -create a clip model
   -has title, body, (other attributes)
@@ -50,7 +44,12 @@ Controllers:
   -handles creation of clip
     -photo upload
     -body (text) of clip submission
-
+-finish implementing user auth
+  -fix "your clips page" (css tweaks)
+  -check to make sure login/logout scenarios ok
+  -test login/logout/recover password
+  -think about building an admin page
+  -need a 404 error for /clips when not signed in
 -implement music syncing feature (see youtube api hack)
   -finish implementing jquery dropdown with api
   -clip controller
