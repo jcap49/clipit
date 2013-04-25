@@ -38,16 +38,26 @@
 
 // clip/some_slug
 
-#clip-address {
-  margin-top: -20px;
-}
-#clip-show-title {
-  display: block;
+#clip-show-info {
   position: absolute;
   margin: auto;
-  margin-top: -10px;
-  margin-left: 300px;
+  margin-top: 100px;
+  margin-left: -15px;
+}
+
+#clip-show-title {
+  display: block;
+  position: relative;;
+  margin: auto;
+  margin-left: 550px;
   font-size: 30px;
+}
+
+#clip-show-song {
+  display: block;
+  position: relative;
+  margin-left: 550px;
+  padding-top: 15px;
 }
 
 #clip-show-photo {
@@ -59,13 +69,17 @@
 
 #clip-show-photo img {
   margin-top: 30px;
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
+  position: absolute;
 }
 
 #clip-show-body {
+  width: 350px;
   position: relative;
-  margin-top: 10px;
-  margin-right: 100px;
-
+  margin-top: 375px;
+  float: right;
 }
 
 #clip-show-video {
