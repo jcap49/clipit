@@ -1,7 +1,9 @@
-<div class="row" id="clip-show">
-  <span id="clip-title-perm"><strong><%= @clip.title %></strong></span>
-  <%= image_tag @clip.photo %>
-  <%= @clip.song %>
-  <span id="song-player"><%= raw @e_video.first %></span>
-  <%= @clip.body %>
+<div id="clip-show">
+  <div id="clip-show-info">
+    <span id="clip-show-title"><strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong></span>
+    <span id="clip-show-song"><%= @clip.song %></span>
+  </div>
+  <span id="clip-show-photo"><%= image_tag @clip.photo.url(:large) %></span>
+  <span id="clip-show-body"><%= @clip.body %></span>
+  <span id="clip-show-video"><%= raw @e_video.first %></span>
 </div>

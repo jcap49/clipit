@@ -13,6 +13,7 @@ To-do:
   -create:
     -"Create photo" button needs to be hidden
 -create a flash error for false password login attempt
+-fix create clip bug with "unless rendering" thing
 
 Done (as of 4/21):
 
