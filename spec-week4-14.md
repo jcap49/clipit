@@ -1,7 +1,7 @@
 ClipIt Spec - 4/14-4/20
 
 To-do:
-
+-fix mailer to send forgot password message
 -refactor clips/show & /examples into a partial
   -error messages
   -error chrome is ugly as hell
