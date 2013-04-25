@@ -8,7 +8,7 @@ class Clip < ActiveRecord::Base
   attr_accessible :user_id, :title, :body, :photo, :slug, :unique_url, :song, :song_id
   has_attached_file :photo, :styles => {
     :small => "160x160>",
-    :large => "600x600>"}
+    :large => "525x525>"}
 
   # Validations
   validates :title, presence: true, length: {maximum: 250}

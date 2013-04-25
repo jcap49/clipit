@@ -38,10 +38,14 @@
 
 // clip/some_slug
 
+#clip-address {
+  margin-top: -20px;
+}
 #clip-show-title {
+  display: block;
   position: absolute;
   margin: auto;
-  margin-top: -30px;
+  margin-top: -10px;
   margin-left: 300px;
   font-size: 30px;
 }
@@ -51,10 +55,15 @@
   margin: auto;
   margin-top: 100px;
   margin-left: 100px;
-  padding-top: 20px;
+}
+
+#clip-show-photo img {
+  margin-top: 30px;
 }
 
 #clip-show-body {
+  position: relative;
+  margin-top: 10px;
   margin-right: 100px;
 
 }

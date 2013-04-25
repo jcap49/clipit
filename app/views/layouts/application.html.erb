@@ -8,12 +8,17 @@
 </head>
 <body>
 
-  <%= render 'layouts/header' %>
+  <% unless @clip && request.path == clip_path(@clip) %>
+   <%= render 'layouts/header' %>
+  <% end %>
+
 
 
   <div class="row">
    <div class="large-1 columns" id="home-nav">
+    <% unless @clip && request.path == clip_path(@clip) %>
     <%= render 'layouts/menu' %>
+    <% end %>
    </div>
    <div class="large-11 columns">
     <%= yield %>
@@ -21,7 +26,8 @@
   </div>
 
 
-  <%= render 'layouts/footer' %>
+   <%= render 'layouts/footer' %>
+
 
 
 </body>
