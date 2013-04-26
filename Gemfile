@@ -9,6 +9,7 @@ gem 'devise'
 gem 'cocaine', '0.5.1'
 gem "zurb-foundation"
 gem "compass"
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
