@@ -1,4 +1,9 @@
 // clip/new
+
+#new-clip {
+  margin-top: -30px;
+}
+
 #clip_unique_url {
   float: right;
   width: 300px;
@@ -12,6 +17,11 @@
 #photo {
   margin-top: 20px;
 }
+
+#song-select {
+  margin-top: 20px;
+}
+
 #clip-description {
   margin-top: 50px;
 }
@@ -26,15 +36,10 @@
 }
 
 #clip_photo {
-  background-color: gray;
-  height: 400px;
-  width: 720px;
+
 }
 
-#clip_photo input {
-  margin-top: -9999999px;
-  margin-left: 9999999px;
-}
+
 
 // clip/some_slug
 

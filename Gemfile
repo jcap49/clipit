@@ -7,6 +7,8 @@ gem 'friendly_id', "~> 4.0.9"
 gem 'youtube_it'
 gem 'devise'
 gem 'cocaine', '0.5.1'
+gem "zurb-foundation", :git => "git@github.com:zurb/foundation.git"
+gem "compass"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

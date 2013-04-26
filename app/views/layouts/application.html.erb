@@ -3,23 +3,25 @@
 <head>
   <title>Clip.It - the easiest way to share the soundtrack of your memories</title>
   <link rel="shortcut icon" href="/rails.png" type="image/png">
+  <link href="/stylesheets/normalize.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <% unless @clip && request.path == clip_path(@clip) %>
+
    <%= render 'layouts/header' %>
-  <% end %>
+
 
 
 
   <div class="row">
    <div class="large-1 columns" id="home-nav">
-    <% unless @clip && request.path == clip_path(@clip) %>
+
     <%= render 'layouts/menu' %>
-    <% end %>
+
    </div>
    <div class="large-11 columns">
     <%= yield %>
