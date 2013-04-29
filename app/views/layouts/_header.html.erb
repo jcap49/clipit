@@ -10,9 +10,10 @@
   <div id="greeting">
     <% if user_signed_in? %>
      <p>Hey there, <%= current_user.email %>!</p>
-    <% elsif current_user.try(:admin?) %>
+    <% elsif admin_signed_in? %>
      <p>Hello, Admin!</p>
-     <% else %>
+    <% else %>
+      <p></p>
     <% end %>
   </div>
 </div>

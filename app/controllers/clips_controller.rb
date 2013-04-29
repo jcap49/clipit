@@ -3,6 +3,7 @@ class ClipsController < ApplicationController
 
   def index
    @clips = current_user.clips
+   @users = User.all
   end
 
   def show

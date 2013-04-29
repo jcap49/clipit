@@ -7,9 +7,6 @@
     <%= clip.created_at %>
   </p>
 <% end %>
-<% if current_user.admin? %>
-  <p>hey admin dude!</p>
-<% end %>
 <br>
 <%= link_to 'New Clip', new_clip_path %>
 
