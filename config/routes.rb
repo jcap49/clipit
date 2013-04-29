@@ -11,6 +11,6 @@ ClipIt::Application.routes.draw do
 
   match '/admins/index', to: 'admins#dashboard'
   match '/example',   to: 'clips#example'
-  match '/about',     to: 'static_pages#about'
+  match '/why',       to: 'static_pages#why'
   root                to: 'static_pages#home'
 end
