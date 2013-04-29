@@ -3,7 +3,7 @@ class Clip < ActiveRecord::Base
   friendly_id :unique_url , :use => :slugged
 
   belongs_to :user
-  belongs_to :admin
+
 
   # Attrs
   attr_accessible :user_id, :title, :body, :photo, :slug, :unique_url, :song, :song_id
