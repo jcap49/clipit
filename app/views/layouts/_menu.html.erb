@@ -6,7 +6,7 @@
  <% if user_signed_in? %>
   <li><%= link_to "Your Clips", clips_path %></li>
  <% end %>
- <% if admin_signed_in? %>
+ <% if current_user.try(:admin?) %>
   <li><%= link_to "Admin Dashboard", admins_index_path %></li>
  <% end %>
 </ul>
