@@ -1,2 +1,4 @@
 <p>Admin Dashboard</p>
-
+<% @users.each do |user| %>
+  <%= user.email %>
+<% end %>

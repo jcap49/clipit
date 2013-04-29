@@ -7,6 +7,6 @@
   <li><%= link_to "Your Clips", clips_path %></li>
  <% end %>
  <% if current_user.try(:admin?) %>
-  <li><%= link_to "Admin Dashboard", admins_index_path %></li>
+  <li><%= link_to "Admin Dashboard", admins_dashboard_path %></li>
  <% end %>
 </ul>
