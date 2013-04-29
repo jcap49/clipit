@@ -1,5 +1,4 @@
 <h2>Your Clips</h2>
-
 <% @clips.each do |clip| %>
   <p>
     <strong><%= link_to "#{clip.title}", clip %></strong>
@@ -7,6 +6,9 @@
     <%= link_to 'Delete', clip_path("#{clip.id}"), method: :delete, data: { confirm: 'Are you sure you want to delete your epic clip?' } %>
     <%= clip.created_at %>
   </p>
+<% end %>
+<% if current_user.admin? %>
+  <p>hey admin dude!</p>
 <% end %>
 <br>
 <%= link_to 'New Clip', new_clip_path %>

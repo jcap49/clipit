@@ -10,7 +10,7 @@ class Clip < ActiveRecord::Base
     :small => "160x160>",
     :large => "525x525>"}
 
-  # Validations
+  # Validationsn
   validates :title, presence: true, length: {maximum: 250}
   validates :body, presence: true, length: {maximum: 1000}
 
@@ -21,5 +21,4 @@ class Clip < ActiveRecord::Base
   validates :song, presence: true
 
   # TO-DO: add a song attr & migration
-
 end
