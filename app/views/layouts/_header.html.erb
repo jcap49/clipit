@@ -3,17 +3,12 @@
    <h3>Clip.It - the easiest way to share the soundtrack of your memories</h3>
    <p>
     <%= link_to "Sign-up", new_user_registration_path %> || <%= link_to "Sign-in", new_user_session_path %> ||
-    <%= link_to "Log-out", destroy_user_session_path, :method => :delete %> ||
-    <%= link_to "Admin", new_admin_session_path %>
+    <%= link_to "Log-out", destroy_user_session_path, :method => :delete %>
    </p>
 
   <div id="greeting">
     <% if user_signed_in? %>
      <p>Hey there, <%= current_user.email %>!</p>
-    <% elsif admin_signed_in? %>
-     <p>Hello, Admin!</p>
-    <% else %>
-      <p></p>
     <% end %>
   </div>
 </div>

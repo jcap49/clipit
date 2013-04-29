@@ -1,8 +1,6 @@
 ClipIt::Application.routes.draw do
   devise_for :users
-  devise_for :admins
 
-  resources :admins, only: [:index]
   resources :clips, only: [:new, :create, :show, :edit, :index, :destroy, :update] do
     collection do
       get :video_results
