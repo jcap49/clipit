@@ -1,6 +1,6 @@
 class Clip < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :unique_url , :use => :slugged
+  friendly_id :title , :use => :slugged
 
   belongs_to :user
 

@@ -28,12 +28,6 @@
     <%= f.text_field :title %>
   </div>
 
-  <div id="unique-url">
-    <%= f.label :unique_url, "Create your unique url:" %>
-    <span id="url"><%= "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %></span>
-    <%= f.text_field :unique_url %>
-  </div>
-
   <div id="photo" >
     <%= f.label :photo, "Upload your photo here: " %>
     <%= f.file_field :photo %>
