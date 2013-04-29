@@ -42,8 +42,11 @@ class ClipsController < ApplicationController
       end
     else
       @clip = Clip.new(params[:clip])
-      @clip.save
-      redirect_to @clip, notice: 'Clip was successfully created.'
+      if @clip.save
+        redirect_to @clip, notice: 'Clip was successfully created.'
+      else
+        render new_clip_path
+      end
     end
   end
 
