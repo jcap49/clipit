@@ -3,6 +3,7 @@ class AdminsController < ApplicationController
 
   def dashboard
     @users = User.all
+    @clips = Clip.all
   end
 
 end

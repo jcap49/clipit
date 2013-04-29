@@ -1,4 +1,6 @@
-<p>Admin Dashboard</p>
-<% @users.each do |user| %>
-  <%= user.email %>
-<% end %>
+<p><strong>Admin Dashboard</strong></p>
+<span><%= @users.count %> users</span>
+<br>
+<br>
+<span><%= @clips.count %> clips</span>
+
