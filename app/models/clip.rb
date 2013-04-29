@@ -18,7 +18,6 @@ class Clip < ActiveRecord::Base
   #TO-DO: add presence validator back to photo before pushing live
 
   validates :slug, presence: true
-  validates :unique_url, presence: true, length: {maximum: 100}
   validates :song, presence: true
 
   # TO-DO: add a song attr & migration

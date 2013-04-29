@@ -33,10 +33,13 @@ class ClipsController < ApplicationController
   end
 
   def create
-     if user_signed_in?
-      @user_clip = current_user.clips.build(params[:clip])
-      @user_clip.save
-      redirect_to @user_clip, notice: 'Clip was successfully created.'
+    if user_signed_in?
+      @clip = current_user.clips.build(params[:clip])
+      if @clip.save
+        redirect_to @clip, notice: 'Clip was successfully created.'
+      else
+        render new_clip_path
+      end
     else
       @clip = Clip.new(params[:clip])
       @clip.save
