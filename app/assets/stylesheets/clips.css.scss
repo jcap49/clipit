@@ -43,14 +43,14 @@
   position: absolute;
   margin: auto;
   margin-top: 100px;
-  margin-left: -15px;
+  margin-left: 40%;
 }
 
 #clip-show-title {
   display: block;
   position: relative;;
   margin: auto;
-  margin-left: 550px;
+  margin-left: 10%;
   font-size: 30px;
 }
 
@@ -62,6 +62,7 @@
 }
 
 #clip-show-photo {
+  width: 80%;
   position: relative;
   margin: auto;
   margin-top: 100px;
@@ -69,17 +70,19 @@
 }
 
 #clip-show-photo img {
-  margin-top: -20%;
   -moz-box-shadow: 0 0 5px 5px #888;
   -webkit-box-shadow: 0 0 5px 5px#888;
   box-shadow: 0 0 5px 5px #888;
-  position: absolute;
+  position: relative;
+  margin-top: -8%;
+  margin-left: -10%;
 }
 
 #clip-show-body {
-  width: 350px;
+  width: 35%;
   position: relative;
-  margin-top: 375px;
+  margin-top: 30%;
+  margin-right: 5%;
   float: right;
 }
 
