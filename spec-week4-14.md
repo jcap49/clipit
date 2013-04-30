@@ -1,7 +1,8 @@
 ClipIt Spec - 4/14-4/20
 
 To-do:
--fix mailer to send forgot password message
+
+-fix footer (change from fixed to absolute and position properly)
 -refactor clips/show & /examples into a partial
   -error messages
   -error chrome is ugly as hell
@@ -13,7 +14,7 @@ To-do:
   -create:
     -"Create photo" button needs to be hidden
 -create a flash error for false password login attempt
--fix create clip bug with "unless rendering" thing
+
 
 Done (as of 4/21):
 
@@ -24,6 +25,8 @@ Miscellaneous:
 -wrote about copy
 -fix delete clip bug
 -figure out how to constrain photo size
+-fix mailer to send forgot password message
+-fix create clip bug with "unless rendering" thing
 
 Views:
 -implement mock ups (use some previous work as well)

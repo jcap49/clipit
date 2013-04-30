@@ -6,6 +6,16 @@
   float: right;
 }
 
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-width: 1px 0 0 1px;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #656565;
+}
+
