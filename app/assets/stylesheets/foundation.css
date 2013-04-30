@@ -1273,7 +1273,7 @@ button, .button {
   padding-left: 1.5em;
   font-size: 1em;
   background-color: #DC6951;
-  border-color: #2284a1;
+  border-color: #474747;
   color: white; }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #c45c47; }
@@ -2344,7 +2344,7 @@ form.custom {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #111111;
+  background: #474747;
   margin-bottom: 1.875em; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2414,7 +2414,7 @@ form.custom {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #111111; }
+      background: #474747; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2432,7 +2432,7 @@ form.custom {
     width: 100%;
     height: auto;
     display: block;
-    background: #333333;
+    background: #474747;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider {
@@ -2573,7 +2573,7 @@ form.custom {
       line-height: 45px;
       background: #474747; }
       .top-bar-section li a:not(.button):hover {
-        background: gray; }
+        background: #636363; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {

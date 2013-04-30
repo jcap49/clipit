@@ -2,14 +2,6 @@
 
 <div id="home-wrapper">
   <span id="create-button"><%= link_to "Create your own", new_clip_path, class: "button" %></span>
-  <div id="clip-show">
-    <div id="title-song">
-      <span id="clip-show-title"><strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong></span>
-      <span id="clip-show-song"><%= @clip.song %></span>
-    </div>
-    <span id="clip-show-photo"><%= image_tag @clip.photo.url(:large) %></span>
-    <span id="clip-show-body"><%= @clip.body %></span>
-    <span id="clip-show-video"><%= raw @e_video.first %></span>
-  </div>
+  <%= render 'layouts/clip' %>
 </div>
 
