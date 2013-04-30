@@ -75,5 +75,6 @@ ClipIt::Application.configure do
   }
 }
   # for mailer
-  config.action_mailer.default_url_options = { :host => 'http://clipitt.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'clipitt.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
 end
