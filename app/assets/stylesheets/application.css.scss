@@ -1,5 +1,5 @@
 /* Background color for the top bar */
-$topbar-bg: #333;
+$topbar-bg: #546;
 
 /* Height and margin */
 $topbar-height: 45px;
@@ -37,33 +37,3 @@ $topbar-menu-icon-color-toggled: #888;
 /* Transitions and breakpoint styles */
 $topbar-transition-speed: 300ms;
 $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
-
-
-#user-actions {
-  float: right;
-  margin-top: -130px;
-}
-
-#greeting {
-  float: right;
-}
-
-#create-button {
-  float: right;
-  position: relative;
-  margin-top: 0%;
-  margin-right: 45%;
-}
-#footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  border-width: 1px 0 0 1px;
-  padding: 8px 12px;
-  text-align: center;
-  font-size: 14px;
-  color: #656565;
-}
-

@@ -1,4 +1,13 @@
-<p>
-  Our memories are inextricably linked to sounds. And we try to capture our most treasured
-  memories on film. It's now time to link those two together. Create your first clip today!
-</p>
+<h3>The easiest way to capture the soundtrack of your memories</h3>
+
+<div id="home-wrapper">
+  <span id="create-button"><%= link_to "Create your own", new_clip_path, class: "button" %></span>
+  <div id="clip-show">
+    <span id="clip-show-title"><strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong></span>
+    <span id="clip-show-song"><%= @clip.song %></span>
+    <span id="clip-show-photo"><%= image_tag @clip.photo.url(:large) %></span>
+    <span id="clip-show-body"><%= @clip.body %></span>
+    <span id="clip-show-video"><%= raw @e_video.first %></span>
+  </div>
+</div>
+

@@ -1,11 +1,33 @@
-<div class="row">
-   <h1 id="logo"><%= link_to "Clip.It", root_url %></h1>
-   <h3>Clip.It - the easiest way to share the soundtrack of your memories</h3>
-   <p>
-    <%= link_to "Sign-up", new_user_registration_path %> || <%= link_to "Sign-in", new_user_session_path %> ||
-    <%= link_to "Log-out", destroy_user_session_path, :method => :delete %>
-   </p>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "Clip.It", root_url %></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Home", root_url %></li>
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Why", why_path %></li>
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Examples", example_path %></li>
+      <li class="divider"></li>
+    </ul>
+    <ul class="right">
+      <li class="active"><%= link_to "Log-out", destroy_user_session_path, :method => :delete %></li>
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Sign-up", new_user_registration_path %></li>
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Sign-in", new_user_session_path %></li>
+      <li class="divider"></li>
+      <li class="active"><%= link_to "Admin Dashboard", admins_dashboard_path %></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
 
+<div class="row">
   <div id="greeting">
     <% if user_signed_in? %>
      <p>Hey there, <%= current_user.email %>!</p>
