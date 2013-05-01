@@ -13,7 +13,7 @@ describe clip do
   it { should respond_to(:slug) }
   it { should respond_to(:photo) }
   it { should respond_to(:body) }
-  it { should respond_to(:user_id) }
+  it { should respond_to(:user_id) }r
   it { should respond_to(:song) }
   its(:user) { should == user }
 
@@ -41,3 +41,4 @@ describe clip do
     before { @clip.content = "a" * 141 }
     it { should_not be_valid }
   end
+end

@@ -1,35 +1,14 @@
-<nav class="top-bar">
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to "Clip.It", root_url %></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="left">
-      <li class="divider"></li>
-      <li class="active"><%= link_to "Home", root_url %></li>
-      <li class="divider"></li>
-      <li class="active"><%= link_to "Why", why_path %></li>
-      <li class="divider"></li>
-      <li class="active"><%= link_to "Examples", example_path %></li>
-      <li class="divider"></li>
-    </ul>
-    <ul class="right">
-      <% if user_signed_in? %>
-        <li class="active"><%= link_to "Log-out", destroy_user_session_path, :method => :delete %></li>
-        <li class="divider"></li>
-      <% else %>
-        <li class="active"><%= link_to "Sign-in", new_user_session_path %></li>
-        <li class="divider"></li>
-      <% end %>
-      <% if current_user.try(:admin?) %>
-        <li class="active"><%= link_to "Admin Dashboard", admins_dashboard_path %></li>
-        <li class="divider"></li>
-      <% end %>
-    </ul>
-  </section>
-</nav>
+<header class="main">
+    <h1 class="logo"><a href="." class="ss-list">Clip.It</a></h1>
+    <a href="#menu" class="menu-trigger ss-icon" id="menu-icon">&#9776;</a>
+    <nav id="menu">
+      <ul>
+        <li><%= link_to "Home", root_url %></li>
+        <li><%= link_to "Why", why_path %></li>
+        <li><%= link_to "Examples", example_path %></li>
+      </ul>
+    </nav>
+  </header>
 
 <div class="row">
   <div id="greeting">

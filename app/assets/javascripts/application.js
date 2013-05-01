@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require application.js
+//= require jquery.jpanelmenu.min.js
 //= require custom.modernizr.js
 //= require foundation.js
-//= require foundation.min.js
 //= require zepto.js
 //= require foundation.topbar.js
+

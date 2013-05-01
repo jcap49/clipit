@@ -6,14 +6,8 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script>
-    $(function(){
-      $(document).foundation();
-    })
-  </script>
 </head>
 <body>
-
 
   <%= render 'layouts/header' %>
 
@@ -62,6 +56,11 @@
         w.addEventListener("load", gs, false) :
         w.attachEvent("onload", gs);
     })(window);
+  </script>
+
+  <script>
+    var jPM = $.jPanelMenu();
+    jPM.on();
   </script>
 </body>
 </html>
