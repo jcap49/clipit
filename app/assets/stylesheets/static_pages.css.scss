@@ -16,6 +16,10 @@
   float: right;
 }
 
+.home-wrapper h3 {
+  margin-top: -10%;
+}
+
 #create-button {
   float: right;
   position: relative;
@@ -46,7 +50,8 @@
 #menu {
   text-indent: -9999px;
 }
-#jPanelMenu-menu nav {
+#jPanelMenu-menu {
+  background: #474747;
 
 }
 
