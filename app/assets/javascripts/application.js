@@ -15,6 +15,5 @@
 //= require application.js
 //= require custom.modernizr.js
 //= require foundation.js
-//= require zepto.js
-//= require foundation.topbar.js
+//= require foundation.topbar
 
