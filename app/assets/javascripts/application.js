@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require application.js
 //= require custom.modernizr.js
+//= require jquery-1.9.1.js
+//= require jquery-ui.js
 //= require foundation.js
 //= require foundation.topbar
 

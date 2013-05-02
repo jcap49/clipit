@@ -10,20 +10,11 @@
 
   <%= render 'layouts/header' %>
 
-
   <div class="row">
-   <div class="large-1 columns" id="home-nav">
-
-    <%= render 'layouts/menu' %>
-
-   </div>
-   <div class="large-11 columns">
     <%= yield %>
-   </div>
   </div>
 
-
-   <%= render 'layouts/footer' %>
+  <%= render 'layouts/footer' %>
 
   <%= javascript_include_tag "application" %>
   <script type="text/javascript">
@@ -57,10 +48,11 @@
         w.attachEvent("onload", gs);
     })(window);
   </script>
+
   <script>
-  $(function(){
-    $(document).foundation();
-  })
+    $(function(){
+      $(document).foundation();
+    })
   </script>
 </body>
 </html>

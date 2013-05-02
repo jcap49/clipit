@@ -1,10 +1,10 @@
-<div id="clip-container">
-  <div id="clip-info">
-    <strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong>
-    <br>
-    <%= @clip.song %>
+<div class="clip-container">
+  <div class="image-column">
+    <%= image_tag @clip.photo.url(:large) %>
   </div>
-  <%= image_tag @clip.photo.url(:large) %>
-  <%= @clip.body %>
-  <div id="clip-show-video"><%= raw @e_video.first %></div>
+  <div class="info-column">
+    <strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong><br>
+    <div class="clip-song"><i><%= @clip.song %></i><br></div>
+    <div class="clip-body"><%= @clip.body %></div>
+  </div>
 </div>

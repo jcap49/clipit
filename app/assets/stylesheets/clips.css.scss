@@ -1,3 +1,39 @@
+// _clip_new
+.clip-container {
+  .image-column, .info-column {
+    float: left;
+  }
+
+  .image-column {
+    max-width: 50%;
+
+    img {
+      -moz-box-shadow: 0 0 5px 5px #888;
+      -webkit-box-shadow: 0 0 5px 5px#888;
+      box-shadow: 0 0 5px 5px #888;
+    }
+  }
+
+  .info-column {
+    min-width: 300px;
+    max-width: 50%;
+    margin-top: 15%;
+
+    a {
+      font-size: 200%;
+    }
+  }
+
+  .clip-song {
+    margin-top: 1%;
+  }
+
+  .clip-body {
+    margin-top: 10%;
+  }
+}
+
+
 // _clip
 
 #clip-container {
