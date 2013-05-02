@@ -11,7 +11,7 @@ class Clip < ActiveRecord::Base
     :small => "160x160>",
     :large => "525x525>"}
 
-  # Validationsn
+  # Validations
   validates :title, presence: true, length: {maximum: 250}
   validates :body, presence: true, length: {maximum: 1000}
 
