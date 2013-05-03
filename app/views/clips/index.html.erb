@@ -4,10 +4,12 @@
     <strong><%= link_to "#{clip.title}", clip %></strong>
     <%= link_to 'Edit', edit_clip_path(clip) %>
     <%= link_to 'Delete', clip_path("#{clip.id}"), method: :delete, data: { confirm: 'Are you sure you want to delete your epic clip?' } %>
-    <%= clip.created_at %>
+    <%= clip.created_at.strftime("%d %B. %Y") %>
   </p>
 <% end %>
 <br>
 <%= link_to 'New Clip', new_clip_path %>
+<br>
+<br>
 
 

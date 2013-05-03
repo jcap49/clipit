@@ -1,10 +1,5 @@
 // _clip_new
 @media only screen and (max-width: 768px) {
-  #create-button {
-    margin: auto;
-
-  }
-
   .image-column {
     max-width: auto;
 
@@ -60,7 +55,7 @@
   margin-right: 33%;
 }
 
-#clip-show-video {
+#clip-show-video iframe {
   margin-left: -9999px;
   height: 100px;
 }

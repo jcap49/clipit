@@ -1,3 +1,15 @@
+<script>
+  // Get element holding the video (embed or object)
+  var player = document.getElementById("myYouTubePlayer");
+
+  //Create a simple function and check if player exists
+  function play() {
+      if(player) {
+          player.playVideo();
+      }
+  }
+</script>
+
 <div class="clip-container">
   <% if current_page?(example_path) %>
     <span id="example-button"><%= link_to "See more", example_path, class: "button" %></span>
@@ -9,7 +21,7 @@
     <strong><u id="clip-title"><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong><br>
     <div class="clip-song"><i><%= @clip.song %></i><br></div>
     <div class="clip-body"><%= @clip.body %></div><br>
-    <div class="play-button"><%= link_to "Play Song", example_path, class: "button" %></div>
+    <div class="play-button"><a href="#" onclick="play()" class="button">Play Song</a></div>
     <div id="clip-show-video"><%= raw @e_video.first %></div>
   </div>
 </div>

@@ -16,8 +16,10 @@
       <li class="divider"></li>
       <li class="active"><%= link_to "Examples", example_path %></li>
       <li class="divider"></li>
+      <% unless user_signed_in? %>
       <li class="active"><%= link_to "Sign-up", new_user_registration_path %></li>
       <li class="divider"></li>
+      <% end %>
     </ul>
     <ul class="right">
       <% if user_signed_in? %>
