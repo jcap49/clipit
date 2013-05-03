@@ -7,13 +7,26 @@
       margin-left: 50%;
     }
   }
+
+  .info-column .button {
+    text-align: center;
+  }
+
+  #clip-show-video iframe {
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  .play-button {
+  .info-column .button {
     display: none;
     margin-top: 10%;
   }
+
+  #clip-show-video iframe {
+  margin-left: -9999px;
+  height: 100px;
+}
 }
 
 .clip-container {
@@ -51,14 +64,13 @@
 }
 
 #example-button {
-  float: right;
-  margin-right: 33%;
+  text-align: center;
 }
 
-#clip-show-video iframe {
-  margin-left: -9999px;
-  height: 100px;
+#create-button {
+  text-align: center;
 }
+
 
 // clip/new
 

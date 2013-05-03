@@ -10,10 +10,15 @@
   }
 </script>
 
+
+<% if current_page?(example_path) %>
+ <div id="example-button">
+  <%= link_to "See more", example_path, class: "button" %>
+ <p>Ready? <%= link_to "Create your own!", new_clip_path %></p>
+ </div>
+
+<% end %>
 <div class="clip-container">
-  <% if current_page?(example_path) %>
-    <span id="example-button"><%= link_to "See more", example_path, class: "button" %></span>
-  <% end %>
   <div class="image-column" id="mobile-only">
     <%= image_tag @clip.photo.url(:large) %>
   </div>
@@ -21,7 +26,7 @@
     <strong><u id="clip-title"><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong><br>
     <div class="clip-song"><i><%= @clip.song %></i><br></div>
     <div class="clip-body"><%= @clip.body %></div><br>
-    <div class="play-button"><a href="#" onclick="play()" class="button">Play Song</a></div>
+    <a href="#" onclick="play()" class="button">Play Song</a>
     <div id="clip-show-video"><%= raw @e_video.first %></div>
   </div>
 </div>
