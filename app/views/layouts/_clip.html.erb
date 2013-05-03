@@ -26,7 +26,6 @@
     <strong><u id="clip-title"><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong><br>
     <div class="clip-song"><i><%= @clip.song %></i><br></div>
     <div class="clip-body"><%= @clip.body %></div><br>
-    <a href="#" onclick="play()" class="button">Play Song</a>
     <div id="clip-show-video"><%= raw @e_video.first %></div>
   </div>
 </div>

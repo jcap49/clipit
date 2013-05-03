@@ -54,12 +54,8 @@
       $(document).foundation();
     })
   </script>
-<script>
-    var yt = document.getElementById("yt");
-
-    function play() {
-        yt.playVideo();
-    }
-</script>
+  <script>
+    $('a#play-video').on('click', playVideo('iframe'));
+  </script>
 </body>
 </html>
