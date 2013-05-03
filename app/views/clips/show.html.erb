@@ -1,13 +1,3 @@
- <h1 id="logo"><%= link_to "Clip.It", root_url %></h1>
-
-  <div id="clip-show">
-    <div id="clip-show-info">
-      <span id="clip-show-title"><strong><u><%= link_to "#{@clip.title}", clip_path(@clip) %></u></strong></span>
-      <span id="clip-show-song"><%= @clip.song %></span>
-    </div>
-    <span id="clip-show-photo"><%= image_tag @clip.photo.url(:large) %></span>
-    <span id="clip-show-body"><%= @clip.body %></span>
-    <span id="clip-show-video"><%= raw @e_video.first %></span>
-  </div>
+<%= render 'layouts/clip' %>
 
 

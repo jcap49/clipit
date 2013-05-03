@@ -1,3 +1,10 @@
+@media only screen and (max-width: 768px) {
+  .row #why {
+    max-width: auto;
+  }
+
+}
+
 #home-wrapper {
   text-align: center;
   h3 {
@@ -48,14 +55,14 @@
   margin-top: -4%;
   font-size: 30px;
   color: white;
-
 }
 
 #menu {
   text-indent: -9999px;
 }
+
 #jPanelMenu-menu {
   background: #474747;
-
 }
+
 

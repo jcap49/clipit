@@ -21,6 +21,9 @@
     </ul>
     <ul class="right">
       <% if user_signed_in? %>
+        <li class="divider"></li>
+        <li class="active"><%= link_to "My Clips", clips_path %></li>
+        <li class="divider"></li>
         <li class="active"><%= link_to "Log-out", destroy_user_session_path, :method => :delete %></li>
         <li class="divider"></li>
       <% else %>

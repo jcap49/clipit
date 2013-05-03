@@ -1,4 +1,26 @@
 // _clip_new
+@media only screen and (max-width: 768px) {
+  #create-button {
+    margin: auto;
+
+  }
+
+  .image-column {
+    max-width: auto;
+
+    img {
+      margin-left: 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .play-button {
+    display: none;
+    margin-top: 10%;
+  }
+}
+
 .clip-container {
   .image-column, .info-column {
     float: left;
@@ -19,7 +41,7 @@
     max-width: 50%;
     margin-top: 15%;
 
-    a {
+    #clip-title {
       font-size: 200%;
     }
   }
@@ -33,50 +55,9 @@
   }
 }
 
-
-// _clip
-
-#clip-container {
-  position: absolute;
-  margin-top: 8%;
-  height: 100%;
-  width: 100%;
-}
-
-#clip-info {
-  position: relative;
+#example-button {
   float: right;
-  margin-top: 10%;
-  margin-right: 15%;
-}
-
-#clip-show-title {
-  position: relative;
-  display: block;
-  font-size: 30px;
-}
-
-#clip-show-song {
-  display: block;
-}
-
-#clip-show-photo {
-  width: 80%;
-  margin: auto;
-}
-
-#clip-show-photo img {
-  -moz-box-shadow: 0 0 5px 5px #888;
-  -webkit-box-shadow: 0 0 5px 5px#888;
-  box-shadow: 0 0 5px 5px #888;
-  float: left;
-}
-
-#clip-show-body {
-  width: 35%;
-  margin-top: 18%;
-  margin-right: 14.25%;
-  float: right;
+  margin-right: 33%;
 }
 
 #clip-show-video {
@@ -116,10 +97,5 @@
   position: relative;
   margin-top: 200px;
 }
-
-#clip_photo {
-
-}
-
 
 
